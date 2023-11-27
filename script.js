@@ -4,7 +4,9 @@ const btn = document.getElementById("button")
 console.log("Button?: ", btn)
 
 document.addEventListener('click', event => {
-    getJoke()
+    if (event.target.id === "button") {
+        getJoke()
+    }
 });
 
 async function getJoke() {
